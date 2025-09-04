@@ -1,3 +1,4 @@
+@charset "UTF-8";
 * {
   box-sizing: border-box;
   margin: 0;
@@ -32,11 +33,25 @@ header p {
   font-size: 18px;
   line-height: 25px;
 }
-.menu h4 {
+.menu ul {
+  display: flex;
+  gap: 24px;
+  align-items: center;
+}
+.menu li {
+  display: inline-block;
+}
+.menu a {
   font-weight: 600;
   font-size: 18px;
   line-height: 25px;
+  text-decoration: none;
   color: #6C6F75;
+}
+
+.logo {
+  width: 159px;
+  height: 48px;
 }
 
 main {
@@ -130,7 +145,6 @@ h2 {
   z-index: 999;
   position: relative;
 }
-.table-container .calendar,
 .table-container .vertical-container {
   display: flex;
   flex-direction: column;
@@ -140,7 +154,6 @@ h2 {
   flex: 0 0 calc(50% - 24px);
   min-width: 0;
 }
-.table-container .calendar .container-element,
 .table-container .vertical-container .container-element {
   display: flex;
   padding: 24px;
@@ -150,7 +163,6 @@ h2 {
   margin: 0;
   flex-direction: column;
 }
-.table-container .calendar .container-element .p,
 .table-container .vertical-container .container-element .p {
   color: black;
   font-style: normal;
@@ -158,7 +170,6 @@ h2 {
   font-size: 18px;
   line-height: 25px;
 }
-.table-container .calendar .container-element .tags,
 .table-container .vertical-container .container-element .tags {
   display: flex;
   flex-direction: row;
@@ -168,7 +179,6 @@ h2 {
   padding: 0px;
   gap: 8px;
 }
-.table-container .calendar .container-element .btn-tag,
 .table-container .vertical-container .container-element .btn-tag {
   display: flex;
   flex-direction: row;
@@ -188,7 +198,6 @@ h2 {
   line-height: 22px;
   color: #2F5DD3;
 }
-.table-container .calendar .container-element .btn-write,
 .table-container .vertical-container .container-element .btn-write {
   box-sizing: border-box;
   display: flex;
@@ -209,7 +218,6 @@ h2 {
   line-height: 22px;
   color: #2F5DD3;
 }
-.table-container .calendar .container-element .btn-more,
 .table-container .vertical-container .container-element .btn-more {
   display: flex;
   flex-direction: row;
@@ -231,7 +239,6 @@ h2 {
   font-size: 16px;
   line-height: 22px;
 }
-.table-container .calendar .container-element .btn-more .triangle,
 .table-container .vertical-container .container-element .btn-more .triangle {
   position: absolute;
   right: -16px;
@@ -293,10 +300,12 @@ h2 {
   width: 100%;
   display: flex;
   flex-direction: row;
+  align-items: center;
   gap: 24px;
 }
 .application form .form-gender label {
   display: flex;
+  align-items: center;
 }
 .application form .form-select {
   display: flex;
@@ -384,9 +393,139 @@ h2 {
 }
 .application form .segmented-picker button {
   padding: 10px 15px;
-  background-color: #2F5DD3;
+  background-color: #0077FF;
   color: white;
   border: none;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.calendar {
+  width: 480px;
+  height: 434px;
+  background: #fff;
+}
+
+table {
+  clear: both;
+  width: 100%;
+  border: 1px solid #dcdcff;
+  border-radius: 3px;
+  border-collapse: collapse;
+  color: #444;
+}
+
+td {
+  height: 64px;
+  text-align: center;
+  vertical-align: middle;
+  border-right: 2px solid #F3F4F7;
+  border-top: 2px solid #F3F4F7;
+  width: 64px;
+  background-color: white;
+}
+
+thead td {
+  border: none;
+  color: #28283b;
+  text-transform: uppercase;
+  font-size: 1.5em;
+}
+
+td.not-current {
+  color: #c0c0c0;
+}
+
+td.today {
+  background-color: #2F5DD3;
+  color: white;
+}
+
+#btnPrev {
+  float: left;
+  margin-bottom: 20px;
+}
+
+#btnNext {
+  float: right;
+  margin-bottom: 20px;
+  color: white;
+}
+
+#btnPrev,
+#btnNext {
+  background: transparent;
+  border: none;
+  outline: none;
+  font-size: 1em;
+  color: #c0c0c0;
+  cursor: pointer;
+  font-family: sans-serif;
+  text-transform: uppercase;
+  transition: all 0.3s ease;
+}
+
+#btnPrev:hover,
+#btnNext:hover {
+  font-weight: bold;
+}
+
+button#burgerMenu {
+  background: none;
+  border: none;
+  font-size: 24px;
+  cursor: pointer;
+  display: none;
+  background-color: #2F5DD3;
+  width: 48px;
+  height: 48px;
+}
+
+@media (max-width: 769px) {
+  main {
+    padding: 16px 20px;
+    max-width: 769px;
+  }
+  header {
+    padding: 8px 20px;
+  }
+}
+@media (max-width: 426px) {
+  nav.menu ul {
+    display: none;
+    /* Скрываем меню по умолчанию для мобильных устройств */
+    flex-direction: column;
+    /* Меню в вертикальном направлении */
+    position: absolute;
+    /* Абсолютное позиционирование */
+    background: white;
+    /* Цвет фона */
+    top: 60px;
+    /* Расположение меню ниже шапки */
+    right: 0;
+    width: 100%;
+    /* Занимает полную ширину */
+    z-index: 100;
+    /* Убираем наложение других элементов */
+    padding: 10px 0;
+    /* Внутренние отступы */
+  }
+  nav.menu.active ul {
+    display: flex;
+    /* Показываем меню при открытии */
+  }
+  button#burgerMenu {
+    display: block;
+  }
+  main {
+    padding: 16px 16px;
+    max-width: 425px;
+  }
+  header {
+    padding: 8px 16px;
+  }
 }
 
 /*# sourceMappingURL=main.css.map */

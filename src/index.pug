@@ -15,8 +15,9 @@ html(lang="ru")
         
     body
         header
-            img(src="../img/Logo.png", alt="logo", class="img") 
-            button#burgerMenu(type="button") ☰
+            img(src="../img/Logo.png", alt="logo", class="logo") 
+            button#burgerMenu(type='button') 
+                i.fa.fa-bars(aria-hidden='true')
             nav.menu 
                 ul
                     li
@@ -27,7 +28,10 @@ html(lang="ru")
                         a(href='#') Пункт 3
                     li
                         a(href='#') Пункт 4
-            p +7 (800) 999-99-99
+                    li
+                        a(href='#') 
+                            p +7 (800) 999-99-99
+            
         main
 
             section.slider
@@ -42,9 +46,9 @@ html(lang="ru")
                         
                         .controls
                             button.btn.prev-btn 
-                                img(src="../img/Стрелка синяя.png", alt=" > ", class="img")
+                                i.fa.fa-angle-left(aria-hidden='true')
                             button.btn.next-btn 
-                                img(src="../img/Стрелка.png", alt=" < ", class="img")
+                                i.fa.fa-angle-right(aria-hidden='true')
 
                     .slide
                         .img-container
@@ -56,9 +60,9 @@ html(lang="ru")
 
                         .controls
                             button.btn.prev-btn 
-                                img(src="../img/Стрелка синяя.png", alt=" > ", class="img")
+                                i.fa.fa-angle-left(aria-hidden='true')
                             button.btn.next-btn 
-                                img(src="../img/Стрелка.png", alt=" < ", class="img")
+                                i.fa.fa-angle-right(aria-hidden='true')
 
                     .slide
                         .img-container
@@ -70,15 +74,11 @@ html(lang="ru")
 
                         .controls
                             button.btn.prev-btn 
-                                img(src="../img/Стрелка синяя.png", alt=" > ", class="img")
+                                i.fa.fa-angle-left(aria-hidden='true')
                             button.btn.next-btn 
-                                img(src="../img/Стрелка.png", alt=" < ", class="img")
+                                i.fa.fa-angle-right(aria-hidden='true')
 
-                
-            
-            //- .controls
-            //-     button.prev-btn Назад
-            //-     button.next-btn Вперед
+        
 
             section.input-form
                 .rating-container 
@@ -92,7 +92,8 @@ html(lang="ru")
                 
                 .container
                     .vertical
-                        img(src="../img/Search.png", alt="blue star") 
+                        //- img(src="../img/Search.png", alt="blue star") 
+                        i.fa.fa-search(aria-hidden='true')
                         p Товары, услуги
                     .btn-search Поиск
                 
@@ -100,8 +101,12 @@ html(lang="ru")
             h2(style="margin-top: 50px;") Мероприятия на 
             div.table-container
                 .calendar
-                    button#btnPrev(type='button') Пред
-                    button#btnNext(type='button') След
+                    button#btnPrev(type='button') 
+                        i.fa.fa-angle-left(aria-hidden='true')
+                    button#btnNext(type='button') 
+                        i.fa.fa-angle-right(aria-hidden='true')
+                        
+                
                     #divCal
 
                 .vertical-container
@@ -123,7 +128,9 @@ html(lang="ru")
 
                         .tags
                             .btn-write Написать
-                            .btn-more Подробнее -
+                            .btn-more 
+                                | Подробнее
+                                i.fa.fa-arrow-right(aria-hidden='true')
                                 .triangle
                             
                     .container-element 
@@ -134,7 +141,9 @@ html(lang="ru")
                         p Международная научно-практическая конференция: “Переход от образовательной среды к образовательной экосистеме в интересах устойчивого развития””
                         .tags
                             .btn-write Написать
-                            .btn-more Подробнее ->
+                            .btn-more 
+                                | Подробнее
+                                i.fa.fa-arrow-right(aria-hidden='true')
                                 .triangle
                     .container-element 
                         .tags
@@ -144,7 +153,9 @@ html(lang="ru")
                         p Международная научно-практическая конференция: “Переход от образовательной среды к образовательной экосистеме в интересах устойчивого развития””
                         .tags
                             .btn-write Написать
-                            .btn-more Подробнее
+                            .btn-more 
+                                | Подробнее
+                                i.fa.fa-arrow-right(aria-hidden='true')
                                 .triangle
                     .container-element 
                         .tags
@@ -155,7 +166,9 @@ html(lang="ru")
                         
                         .tags
                             .btn-write Написать
-                            .btn-more Подробнее
+                            .btn-more 
+                                | Подробнее
+                                i.fa.fa-arrow-right(aria-hidden='true')
                                 .triangle
 
             
@@ -196,10 +209,13 @@ html(lang="ru")
                             | Другой способ
 
                         .segmented-picker
-                            button(type="button", style="background-color:#FC3F1D") Яндекс
-                            button(type="button" style="background-color:#0077FF") Вконтакте
+                            button(type="button", style="background-color:#FC3F1D") 
+                                img(src="../img/yandex.png", alt="ya") 
+                            button(type="button") 
+                                img(src="../img/vk.png", alt="vk") 
     script(src="./js/slider.js")
     script(src="./js/calendar.js")
+    script(src="./js/menu.js")
                     
                 
 

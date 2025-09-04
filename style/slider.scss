@@ -119,12 +119,41 @@
 
 ///
 /// 
+
+
+@media (max-width: 769px) {
+    .slider {
+        display: flex;
+        align-items: center;
+        height: unset;
+        // width: 382px;
+
+        .slide.active {
+            display: flex;
+            flex-direction: row;
+        }
+
+        .vertical {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            padding: 34px;
+            gap: 18px;
+        }
+
+
+        h2 {
+            font-size: 28px;
+        }
+    }
+}
+
 @media (max-width: 426px) {
     .slider {
         display: flex;
         align-items: center;
         height: unset;
-        width: 382px;
+        // width: 382px;
 
         .slide.active {
             display: flex;
@@ -164,7 +193,7 @@
         flex-direction: column;
         align-items: flex-start;
         gap: 16px;
-        width: 382px;
+        // width: 382px;
 
         .calendar {
             width: unset;

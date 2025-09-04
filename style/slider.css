@@ -94,12 +94,32 @@
   color: white;
 }
 
+@media (max-width: 769px) {
+  .slider {
+    display: flex;
+    align-items: center;
+    height: unset;
+  }
+  .slider .slide.active {
+    display: flex;
+    flex-direction: row;
+  }
+  .slider .vertical {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 34px;
+    gap: 18px;
+  }
+  .slider h2 {
+    font-size: 28px;
+  }
+}
 @media (max-width: 426px) {
   .slider {
     display: flex;
     align-items: center;
     height: unset;
-    width: 382px;
   }
   .slider .slide.active {
     display: flex;
@@ -112,6 +132,7 @@
   .slider .vertical p {
     font-size: 16px;
     line-height: 22px;
+    height: 220px;
   }
   .input-form {
     padding: 24px;
@@ -128,7 +149,6 @@
     flex-direction: column;
     align-items: flex-start;
     gap: 16px;
-    width: 382px;
   }
   .table-container .calendar {
     width: unset;
