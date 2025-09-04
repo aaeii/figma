@@ -5,24 +5,91 @@ html(lang="ru")
         meta(name="viewport", content="width=device-width, initial-scale=1.0")
         title Адаптивный Шаблон
         link(rel="stylesheet", href="../style/main.css") 
+        link(rel="stylesheet", href="../style/slider.css") 
         link(rel='stylesheet', href='https://fonts.googleapis.com/css?family=Open+Sans')
+        
     body
         header
-            h1 Заголовок сайта
+            img(src="../img/Logo.png", alt="logo", class="img") 
+            nav.menu 
+                h4 Пункт 1
+                h4 Пункт 2
+                h4 Пункт 3
+                h4 Пункт 4    
+            p +7 (800) 999-99-99
         main
+
             section.slider
-                img(src="../img/Image1.png", alt="Горы", class="img") 
-                .vertical
-                    h2 Слайд 3
-                    p Сайт рыбатекст поможет дизайнеру, верстальщику, вебмастеру сгенерировать несколько абзацев более менее осмысленного текста рыбы на русском языке, а начинающему оратору отточить навык публичных выступлений в домашних условиях. При создании генератора мы использовали небезизвестный универсальный код речей.
-                    btn.btn Кнопка
+                .slides
+                    // Слайды
+                    .slide.active
+                        .img-container
+                            img(src="../img/Image1.png", alt="Горы", class="img")
+                        .vertical
+                            h2 Слайд 1
+                            p Сайт рыбатекст поможет дизайнеру, верстальщику, вебмастеру сгенерировать несколько абзацев более менее осмысленного текста рыбы на русском языке, а начинающему оратору отточить навык публичных выступлений в домашних условиях. При создании генератора мы использовали небезизвестный универсальный код речей.
+                            button.btn Кнопка
+                        
+                        .controls
+                            button.btn.prev-btn 
+                                img(src="../img/Стрелка синяя.png", alt=" > ", class="img")
+                            button.btn.next-btn 
+                                img(src="../img/Стрелка.png", alt=" < ", class="img")
+
+                    .slide
+                        .img-container
+                            img(src="../img/Image2.jpg", alt="Горы", class="img")
+                        .vertical
+                            h2 Слайд 2
+                            p Данный сайт рыбатекст поможет сгенерировать несколько абзацев более менее осмысленного текста.
+                            button.btn Кнопка
+
+                        .controls
+                            button.btn.prev-btn 
+                                img(src="../img/Стрелка синяя.png", alt=" > ", class="img")
+                            button.btn.next-btn 
+                                img(src="../img/Стрелка.png", alt=" < ", class="img")
+
+                    .slide
+                        .img-container
+                            img(src="../img/Image3.jpg", alt="Горы", class="img")
+                        .vertical
+                            h2 Слайд 3
+                            p Сайт рыбатекст поможет дизайнеру, верстальщику, вебмастеру сгенерировать несколько абзацев более менее осмысленного текста.
+                            button.btn Кнопка
+
+                        .controls
+                            button.btn.prev-btn 
+                                img(src="../img/Стрелка синяя.png", alt=" > ", class="img")
+                            button.btn.next-btn 
+                                img(src="../img/Стрелка.png", alt=" < ", class="img")
+
+                
+            
+            //- .controls
+            //-     button.prev-btn Назад
+            //-     button.next-btn Вперед
+
             section.input-form
                 .rating-container 
                     p.p Блок с поиском
+                    .stars
+                        img(src="../img/Star 17.png", alt="blue star") 
+                        img(src="../img/Star 17.png", alt="blue star") 
+                        img(src="../img/Star 17.png", alt="blue star") 
+
+                    
                 
                 .container
+                    .vertical
+                        img(src="../img/Search.png", alt="blue star") 
+                        p Товары, услуги
+                    .btn-search Поиск
+                
 
+            h2(style="margin-top: 50px;") Мероприятия на
             div.table-container
+                
                 .calendar
                     h2 Календарь
 
@@ -81,9 +148,47 @@ html(lang="ru")
                                 .triangle
 
             
+            .container
+                h2 Подача заявки
+                //- .images-container
+                //-         img.image1(src="../img/Other 01.png", alt="")
+                //-         img.image2(src="../img/Vector.png", alt="")
 
-            .images-container
-                img.image1(src="../img/Other 01.png", alt="")
-                img.image2(src="../img/Vector.png", alt="")
-            
+                    
+                .application
+                    form(action="/submit", method="post")
+                        .form-group
+                            input(type="text", id="name", name="name", required=true placeholder="Имя")
+                        .form-group
+                            input(type="email", id="email", name="email", required=true placeholder="Почта")
+                        .form-gender
+                            P Пол:
+                            label
+                                input(type="radio", name="gender", value="male", required=true) 
+                                span.custom-radio
+                                | Мужской
+                                
+                            label
+                                input(type="radio", name="gender", value="female", required=true) 
+                                span.custom-radio
+                                | Женский    
+                                
+                        .form-select
+                            label(for="dropdown") Выберите
+                            select(id="dropdown", name="options", required=true)
+                                option(value="", disabled=true, selected=true) Выбор
+                                option(value="option1") Опция 1
+                                option(value="option2") Опция 2
+                                option(value="option3") Опция 3
+                        button(type="submit") Подать заявку
+                        .text-input-container 
+                            | Другой способ
+
+                        .segmented-picker
+                            button(type="button", style="background-color:#FC3F1D") Яндекс
+                            button(type="button" style="background-color:#0077FF") Вконтакте
+    script(src="./js/slider.js")
+                    
+                
+
 

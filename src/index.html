@@ -5,26 +5,74 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Адаптивный Шаблон</title>
     <link rel="stylesheet" href="../style/main.css">
+    <link rel="stylesheet" href="../style/slider.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans">
   </head>
   <body>
-    <header>
-      <h1>Заголовок сайта</h1>
+    <header><img class="img" src="../img/Logo.png" alt="logo">
+      <nav class="menu"> 
+        <h4>Пункт 1</h4>
+        <h4>Пункт 2</h4>
+        <h4>Пункт 3</h4>
+        <h4>Пункт 4    </h4>
+      </nav>
+      <p>+7 (800) 999-99-99</p>
     </header>
     <main>
-      <section class="slider"><img class="img" src="img/Image1.png" alt="Горы">
-        <div class="vertical">
-          <h2>Слайд 3</h2>
-          <p>Сайт рыбатекст поможет дизайнеру, верстальщику, вебмастеру сгенерировать несколько абзацев более менее осмысленного текста рыбы на русском языке, а начинающему оратору отточить навык публичных выступлений в домашних условиях. При создании генератора мы использовали небезизвестный универсальный код речей.</p>
-          <btn class="btn">Кнопка</btn>
+      <section class="slider">
+        <div class="slides">
+          <!-- Слайды-->
+          <div class="slide active">
+            <div class="img-container"><img class="img" src="../img/Image1.png" alt="Горы"></div>
+            <div class="vertical">
+              <h2>Слайд 1</h2>
+              <p>Сайт рыбатекст поможет дизайнеру, верстальщику, вебмастеру сгенерировать несколько абзацев более менее осмысленного текста рыбы на русском языке, а начинающему оратору отточить навык публичных выступлений в домашних условиях. При создании генератора мы использовали небезизвестный универсальный код речей.</p>
+              <button class="btn">Кнопка</button>
+            </div>
+            <div class="controls">
+              <button class="btn prev-btn"> <img class="img" src="../img/Стрелка синяя.png" alt=" &gt; "></button>
+              <button class="btn next-btn"> <img class="img" src="../img/Стрелка.png" alt=" &lt; "></button>
+            </div>
+          </div>
+          <div class="slide">
+            <div class="img-container"><img class="img" src="../img/Image2.jpg" alt="Горы"></div>
+            <div class="vertical">
+              <h2>Слайд 2</h2>
+              <p>Данный сайт рыбатекст поможет сгенерировать несколько абзацев более менее осмысленного текста.</p>
+              <button class="btn">Кнопка</button>
+            </div>
+            <div class="controls">
+              <button class="btn prev-btn"> <img class="img" src="../img/Стрелка синяя.png" alt=" &gt; "></button>
+              <button class="btn next-btn"> <img class="img" src="../img/Стрелка.png" alt=" &lt; "></button>
+            </div>
+          </div>
+          <div class="slide">
+            <div class="img-container"><img class="img" src="../img/Image3.jpg" alt="Горы"></div>
+            <div class="vertical">
+              <h2>Слайд 3</h2>
+              <p>Сайт рыбатекст поможет дизайнеру, верстальщику, вебмастеру сгенерировать несколько абзацев более менее осмысленного текста.</p>
+              <button class="btn">Кнопка</button>
+            </div>
+            <div class="controls">
+              <button class="btn prev-btn"> <img class="img" src="../img/Стрелка синяя.png" alt=" &gt; "></button>
+              <button class="btn next-btn"> <img class="img" src="../img/Стрелка.png" alt=" &lt; "></button>
+            </div>
+          </div>
         </div>
       </section>
       <section class="input-form">
         <div class="rating-container"> 
           <p class="p">Блок с поиском</p>
+          <div class="stars"><img src="../img/Star 17.png" alt="blue star"><img src="../img/Star 17.png" alt="blue star"><img src="../img/Star 17.png" alt="blue star"></div>
         </div>
-        <div class="container"></div>
+        <div class="container">
+          <div class="vertical"><img src="../img/Search.png" alt="blue star">
+            <p>Товары, услуги</p>
+          </div>
+          <div class="btn-search">Поиск</div>
+        </div>
       </section>
+      <h2 style="margin-top: 50px;">Мероприятия на</h2>
       <div class="table-container">
         <div class="calendar">
           <h2>Календарь</h2>
@@ -96,7 +144,45 @@
           </div>
         </div>
       </div>
-      <div class="images-container"><img class="image1" src="img/Other 01.png" alt=""><img class="image2" src="img/Vector.png" alt=""></div>
+      <div class="container">
+        <h2>Подача заявки</h2>
+        <div class="application">
+          <form action="/submit" method="post">
+            <div class="form-group">
+              <input type="text" id="name" name="name" required placeholder="Имя">
+            </div>
+            <div class="form-group">
+              <input type="email" id="email" name="email" required placeholder="Почта">
+            </div>
+            <div class="form-gender">
+              <P>Пол:</P>
+              <label>
+                <input type="radio" name="gender" value="male" required><span class="custom-radio"></span>Мужской
+              </label>
+              <label>
+                <input type="radio" name="gender" value="female" required><span class="custom-radio"></span>Женский    
+              </label>
+            </div>
+            <div class="form-select">
+              <label for="dropdown">Выберите</label>
+              <select id="dropdown" name="options" required>
+                <option value="" disabled selected>Выбор</option>
+                <option value="option1">Опция 1</option>
+                <option value="option2">Опция 2</option>
+                <option value="option3">Опция 3</option>
+              </select>
+            </div>
+            <button type="submit">Подать заявку</button>
+            <div class="text-input-container">
+               Другой способ</div>
+            <div class="segmented-picker">
+              <button type="button" style="background-color:#FC3F1D">Яндекс</button>
+              <button type="button" style="background-color:#0077FF">Вконтакте</button>
+            </div>
+          </form>
+        </div>
+      </div>
     </main>
   </body>
+  <script src="./js/slider.js"></script>
 </html>
