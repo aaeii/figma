@@ -3,13 +3,16 @@
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Адаптивный Шаблон</title>
+    <title>Test</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" rel="stylesheet">
     <link rel="stylesheet" href="../style/main.css">
     <link rel="stylesheet" href="../style/slider.css">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans">
   </head>
   <body>
     <header><img class="img" src="../img/Logo.png" alt="logo">
+      <button id="burgerMenu" type="button">☰</button>
       <nav class="menu"> 
         <h4>Пункт 1</h4>
         <h4>Пункт 2</h4>
@@ -21,7 +24,6 @@
     <main>
       <section class="slider">
         <div class="slides">
-          <!-- Слайды-->
           <div class="slide active">
             <div class="img-container"><img class="img" src="../img/Image1.png" alt="Горы"></div>
             <div class="vertical">
@@ -72,10 +74,12 @@
           <div class="btn-search">Поиск</div>
         </div>
       </section>
-      <h2 style="margin-top: 50px;">Мероприятия на</h2>
+      <h2 style="margin-top: 50px;">Мероприятия на </h2>
       <div class="table-container">
         <div class="calendar">
-          <h2>Календарь</h2>
+          <button id="btnPrev" type="button">Пред</button>
+          <button id="btnNext" type="button">След</button>
+          <div id="divCal"></div>
         </div>
         <div class="vertical-container">
           <div class="container-element"> 
@@ -185,4 +189,5 @@
     </main>
   </body>
   <script src="./js/slider.js"></script>
+  <script src="./js/calendar.js"></script>
 </html>

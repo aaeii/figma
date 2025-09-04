@@ -3,14 +3,20 @@ html(lang="ru")
     head
         meta(charset="UTF-8")
         meta(name="viewport", content="width=device-width, initial-scale=1.0")
-        title Адаптивный Шаблон
+        title Test
+        
+        link(rel='stylesheet', href='https://fonts.googleapis.com/css?family=Open+Sans')
+
+        link(rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css')
+        link(href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css' rel='stylesheet')
+
         link(rel="stylesheet", href="../style/main.css") 
         link(rel="stylesheet", href="../style/slider.css") 
-        link(rel='stylesheet', href='https://fonts.googleapis.com/css?family=Open+Sans')
         
     body
         header
             img(src="../img/Logo.png", alt="logo", class="img") 
+            button#burgerMenu(type="button") ☰
             nav.menu 
                 h4 Пункт 1
                 h4 Пункт 2
@@ -21,7 +27,6 @@ html(lang="ru")
 
             section.slider
                 .slides
-                    // Слайды
                     .slide.active
                         .img-container
                             img(src="../img/Image1.png", alt="Горы", class="img")
@@ -87,11 +92,12 @@ html(lang="ru")
                     .btn-search Поиск
                 
 
-            h2(style="margin-top: 50px;") Мероприятия на
+            h2(style="margin-top: 50px;") Мероприятия на 
             div.table-container
-                
                 .calendar
-                    h2 Календарь
+                    button#btnPrev(type='button') Пред
+                    button#btnNext(type='button') След
+                    #divCal
 
                 .vertical-container
                     .container-element 
@@ -188,6 +194,7 @@ html(lang="ru")
                             button(type="button", style="background-color:#FC3F1D") Яндекс
                             button(type="button" style="background-color:#0077FF") Вконтакте
     script(src="./js/slider.js")
+    script(src="./js/calendar.js")
                     
                 
 
