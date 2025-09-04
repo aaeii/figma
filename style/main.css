@@ -6,67 +6,43 @@
 
 body {
   font-family: "Open Sans", sans-serif;
+  background-color: #F3F4F7;
 }
 
 header {
   background-color: white;
-  text-align: center;
+  height: 96px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 8px 128px;
+}
+header p {
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 33px;
+  color: #2F5DD3;
+}
+
+.menu {
+  display: flex;
+  flex-direction: row;
+  gap: 24px;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 25px;
+}
+.menu h4 {
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 25px;
+  color: #6C6F75;
 }
 
 main {
-  padding: 128px;
-  background-color: #F3F4F7;
-}
-
-.slider {
-  display: flex;
-  align-items: center;
-  background-color: #f9f9f9;
-  gap: 20px;
-  height: 400px;
-}
-.slider .img {
-  object-fit: cover;
-}
-.slider .vertical {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  padding: 48px;
-  gap: 24px;
-}
-.slider .vertical .btn {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 0px 24px;
-  width: 105px;
-  height: 48px;
-  background: #2F5DD3;
-  color: white;
-  border: none;
-  font-style: normal;
-  font-weight: 400;
-  font-size: 16px;
-  line-height: 22px;
-}
-.slider .vertical h2 {
-  width: 123px;
-  height: 44px;
-  font-style: italic;
-  font-weight: 700;
-  font-size: 32px;
-  line-height: 44px;
-  color: #242A38;
-}
-.slider .vertical p {
-  width: 608px;
-  height: 110px;
-  font-style: normal;
-  font-weight: 400;
-  font-size: 16px;
-  line-height: 22px;
-  color: #6C6F75;
+  padding: 50px 128px;
+  margin: 0 auto;
+  max-width: 1440px;
 }
 
 h2 {
@@ -81,28 +57,52 @@ h2 {
 
 .input-form {
   display: flex;
-  align-items: center;
-  gap: 48px;
-  height: 238px;
   background: #242A38;
+  padding: 48px;
+  gap: 20px;
+  margin-top: 50px;
+  flex-wrap: wrap;
 }
 .input-form .container {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: flex-start;
-  padding-right: 48px;
   gap: 16px;
-  width: 591px;
-  height: 142px;
-  background: #FFFFFF;
+  padding: 24px;
+  flex: 1;
+  box-sizing: border-box;
+  background-color: white;
+}
+.input-form .container .vertical {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 16px;
+  color: #6C6F75;
+}
+.input-form .container .btn-search {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 13px;
+  width: 100%;
+  height: 48px;
+  background: #2F5DD3;
+  color: white;
+  border: none;
+  cursor: pointer;
 }
 .input-form .rating-container {
-  width: 449px;
-  height: 142px;
-  padding-left: 48px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  flex: 1;
+  max-width: 449px;
+  height: auto;
 }
-.input-form .rating-container p.p {
+.input-form .rating-container p {
   font-style: italic;
   font-weight: 700;
   font-size: 32px;
@@ -111,49 +111,46 @@ h2 {
   align-items: center;
   color: #FFFFFF;
 }
+.input-form .rating-container .stars {
+  display: flex;
+  flex-direction: row;
+  gap: 24px;
+}
+.input-form .rating-container img {
+  height: 27px;
+  width: 27px;
+}
 
 .table-container {
   display: flex;
   flex-direction: row;
   align-items: flex-start;
   gap: 48px;
-  height: 1106px;
+  width: 100%;
+  z-index: 999;
+  position: relative;
 }
-.table-container .calendar {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  padding: 0;
-  gap: 24px;
-  width: 480px;
-  height: 434px;
-  flex: none;
-  order: 0;
-  flex-grow: 0;
-}
+.table-container .calendar,
 .table-container .vertical-container {
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: flex-start;
+  justify-content: flex-start;
   padding: 0;
   gap: 24px;
-  width: 656px;
-  height: 1106px;
-  flex: none;
-  order: 1;
-  flex-grow: 0;
+  flex: 0 0 calc(50% - 24px);
+  min-width: 0;
 }
+.table-container .calendar .container-element,
 .table-container .vertical-container .container-element {
   display: flex;
   padding: 24px;
   gap: 24px;
   width: 100%;
-  height: 400px;
   background: #FFFFFF;
   margin: 0;
   flex-direction: column;
 }
+.table-container .calendar .container-element .p,
 .table-container .vertical-container .container-element .p {
   color: black;
   font-style: normal;
@@ -161,6 +158,7 @@ h2 {
   font-size: 18px;
   line-height: 25px;
 }
+.table-container .calendar .container-element .tags,
 .table-container .vertical-container .container-element .tags {
   display: flex;
   flex-direction: row;
@@ -170,6 +168,7 @@ h2 {
   padding: 0px;
   gap: 8px;
 }
+.table-container .calendar .container-element .btn-tag,
 .table-container .vertical-container .container-element .btn-tag {
   display: flex;
   flex-direction: row;
@@ -189,6 +188,7 @@ h2 {
   line-height: 22px;
   color: #2F5DD3;
 }
+.table-container .calendar .container-element .btn-write,
 .table-container .vertical-container .container-element .btn-write {
   box-sizing: border-box;
   display: flex;
@@ -209,6 +209,7 @@ h2 {
   line-height: 22px;
   color: #2F5DD3;
 }
+.table-container .calendar .container-element .btn-more,
 .table-container .vertical-container .container-element .btn-more {
   display: flex;
   flex-direction: row;
@@ -230,6 +231,7 @@ h2 {
   font-size: 16px;
   line-height: 22px;
 }
+.table-container .calendar .container-element .btn-more .triangle,
 .table-container .vertical-container .container-element .btn-more .triangle {
   position: absolute;
   right: -16px;
@@ -243,23 +245,148 @@ h2 {
   transform: translateY(8px);
 }
 
+.container {
+  position: relative;
+  margin-top: 35px;
+}
+
 .images-container {
-  position: absolute;
-  width: 1730px;
-  height: 926px;
-  left: -220px;
-  top: 1830px;
-  transform: rotate(-16.3deg);
+  position: relative;
+  /* top: 0; */
+  /* left: 0; */
+  width: 100%;
+  height: auto;
+  z-index: 0;
+}
+.images-container img {
+  left: -128px;
 }
 .images-container .image1 {
-  display: block;
-  max-width: 100%;
-  height: auto;
-  margin: 0 auto;
+  position: absolute;
+  width: 878px;
+  height: 878px;
+  top: -150px;
+  left: 390px;
 }
 .images-container .image2 {
+  top: -300px;
+  z-index: -1;
+  height: 926px;
+  position: absolute;
+  width: 100vw;
+  height: auto;
+}
+
+.application form {
+  position: absolute;
+  z-index: 2;
+  background-color: white;
+  padding: 48px;
+  gap: 24px;
+  display: flex;
+  flex-direction: column;
+  width: 580px;
+  margin-top: 35px;
+  color: #6C6F75;
+}
+.application form .form-gender {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  gap: 24px;
+}
+.application form .form-gender label {
+  display: flex;
+}
+.application form .form-select {
+  display: flex;
+  gap: 9px;
+  flex-direction: column;
+}
+.application form input[type=text],
+.application form input[type=email],
+.application form select {
+  width: 100%;
+  padding: 10px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding-left: 24px;
+  gap: 8px;
+  height: 48px;
+  border: 2px solid rgba(108, 111, 117, 0.3);
+  color: #242A38;
+}
+.application form input[type=radio] {
+  display: none;
+}
+.application form .custom-radio {
+  width: 24px;
+  height: 24px;
+  background-color: white;
+  border: 2px solid blue;
+  display: inline-block;
+  cursor: pointer;
   position: relative;
-  top: -70px;
+  margin-right: 8px;
+}
+.application form input[type=radio]:checked + .custom-radio::after {
+  content: "";
+  position: absolute;
+  width: 14px;
+  height: 14px;
+  background: #2f5dd3;
+  top: 4px;
+  left: 4px;
+}
+.application form button {
+  padding: 10px 15px;
+  background-color: #2F5DD3;
+  color: white;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  height: 48px;
+}
+.application form button:hover {
+  background-color: #1E4BA1;
+}
+.application form .text-input-container {
+  display: flex;
+  align-items: center;
+  font-size: 25px;
+  text-align: center;
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 22px;
+  color: #3E4958;
+}
+.application form .text-input-container::before,
+.application form .text-input-container::after {
+  content: "";
+  flex: 1;
+  height: 1px;
+  background: rgba(108, 111, 117, 0.3);
+  margin: 0 10px;
+}
+.application form .text-input-container::before {
+  margin-right: 10px;
+}
+.application form .text-input-container::after {
+  margin-left: 10px;
+}
+.application form .segmented-picker {
+  display: flex;
+  flex-direction: row;
+  gap: 24px;
+}
+.application form .segmented-picker button {
+  padding: 10px 15px;
+  background-color: #2F5DD3;
+  color: white;
+  border: none;
 }
 
 /*# sourceMappingURL=main.css.map */

@@ -4,7 +4,7 @@
   },
   "name": "figma",
   "version": "1.0.0",
-  "description": "",
+  "description": "pug src/index.pug -P\r sass style/main.scss style/main.css",
   "main": "index.js",
   "devDependencies": {},
   "scripts": {
