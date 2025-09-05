@@ -11,7 +11,7 @@ body {
 }
 
 main {
-    padding: 50px 128px;
+    padding: 50px 128px 128px 128px;
     margin: 0 auto;
     max-width: 1440px;
     overflow: hidden;
@@ -24,12 +24,12 @@ button {
 header {
     background-color: white;
     height: 96px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 8px 128px;
-    max-width: 1440px;
-    margin: 0 auto;
+
+    // padding: 8px 128px;
+    // margin: 0 auto;
+    // width: 100%;
+
+
 
     p {
         font-weight: 700;
@@ -38,6 +38,16 @@ header {
         color: #2F5DD3;
 
     }
+}
+
+.container-header {
+    max-width: 1440px;
+    display: flex;
+    align-items: center;
+    padding: 8px 128px;
+    margin: 0 auto;
+    justify-content: space-between;
+    height: 100%;
 }
 
 .menu {
@@ -311,32 +321,33 @@ h2 {
     margin-top: 35px;
 }
 
+
 .images-container {
     position: relative;
     width: 100%;
     height: auto;
     z-index: 1;
+}
 
-    img {
-        position: absolute;
-        height: auto;
-    }
+.images-container img {
+    position: absolute;
+    height: auto;
+}
 
-    .image1 {
-        //////
-        width: 878px;
-        top: -150px;
-        left: 50%;
-        transform: translateX(-50%);
-    }
+.image1 {
+    width: 878px;
+    top: -100px;
+    left: 70%;
+    transform: translateX(-50%);
+}
 
-    .image2 {
-        top: -300px;
-        z-index: -1;
-        width: 1730px;
-        height: auto;
-        left: -130px;
-    }
+.image2 {
+    width: 1730px;
+    height: auto;
+    left: 50%;
+    z-index: -1;
+    transform: translateX(-50%) rotate(-16.3deg);
+
 }
 
 .application form {
@@ -597,6 +608,13 @@ button#burgerMenu {
 
 }
 
+
+
+// @media (max-width: 1440px) {
+//     main {
+//         overflow: hidden;
+//     }
+// }
 @media (max-width: 769px) {
     main {
 
@@ -605,7 +623,7 @@ button#burgerMenu {
 
     }
 
-    header {
+    .container-header {
         padding: 8px 20px;
     }
 
@@ -669,22 +687,21 @@ button#burgerMenu {
 
     }
 
-    header {
+    .container-header {
         padding: 8px 16px;
 
+    }
+
+    header {
         p {
             display: none;
         }
     }
 
-
     .images-container {
         .image2 {
-            top: -300px;
-            z-index: -1;
+            top: -70px;
             width: 984px;
-            height: auto;
-            left: -100px;
         }
     }
 

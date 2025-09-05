@@ -103,6 +103,9 @@
     padding: 44px;
     gap: 22px;
   }
+  .slider .vertical p {
+    height: unset;
+  }
 }
 @media (max-width: 769px) {
   .slider {

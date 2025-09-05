@@ -10,7 +10,7 @@ body {
 }
 
 main {
-  padding: 50px 128px;
+  padding: 50px 128px 128px 128px;
   margin: 0 auto;
   max-width: 1440px;
   overflow: hidden;
@@ -23,18 +23,22 @@ button {
 header {
   background-color: white;
   height: 96px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 8px 128px;
-  max-width: 1440px;
-  margin: 0 auto;
 }
 header p {
   font-weight: 700;
   font-size: 24px;
   line-height: 33px;
   color: #2F5DD3;
+}
+
+.container-header {
+  max-width: 1440px;
+  display: flex;
+  align-items: center;
+  padding: 8px 128px;
+  margin: 0 auto;
+  justify-content: space-between;
+  height: 100%;
 }
 
 .menu {
@@ -275,22 +279,25 @@ h2 {
   height: auto;
   z-index: 1;
 }
+
 .images-container img {
   position: absolute;
   height: auto;
 }
-.images-container .image1 {
+
+.image1 {
   width: 878px;
-  top: -150px;
-  left: 50%;
+  top: -100px;
+  left: 70%;
   transform: translateX(-50%);
 }
-.images-container .image2 {
-  top: -300px;
-  z-index: -1;
+
+.image2 {
   width: 1730px;
   height: auto;
-  left: -130px;
+  left: 50%;
+  z-index: -1;
+  transform: translateX(-50%) rotate(-16.3deg);
 }
 
 .application form {
@@ -516,7 +523,7 @@ button#burgerMenu {
     padding: 16px 20px;
     max-width: 769px;
   }
-  header {
+  .container-header {
     padding: 8px 20px;
   }
   #img-figures {
@@ -565,18 +572,15 @@ button#burgerMenu {
     padding: 16px 16px 50px 16px;
     max-width: 425px;
   }
-  header {
+  .container-header {
     padding: 8px 16px;
   }
   header p {
     display: none;
   }
   .images-container .image2 {
-    top: -300px;
-    z-index: -1;
+    top: -70px;
     width: 984px;
-    height: auto;
-    left: -100px;
   }
   h2 {
     font-family: var(--font-family);
