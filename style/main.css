@@ -99,6 +99,13 @@ h2 {
   align-items: center;
   gap: 16px;
   color: #6C6F75;
+  font-family: var(--font-family);
+  font-weight: 400;
+  font-size: 16px;
+  color: #6c6f75;
+}
+.input-form .container .vertical input {
+  border: none;
 }
 .input-form .container .btn-search {
   display: flex;
@@ -148,6 +155,7 @@ h2 {
   width: 100%;
   z-index: 999;
   position: relative;
+  margin-top: 25px;
 }
 .table-container .vertical-container {
   display: flex;
@@ -216,6 +224,7 @@ h2 {
   flex: none;
   order: 0;
   flex-grow: 0;
+  font-family: "Open Sans";
   font-style: normal;
   font-weight: 400;
   font-size: 16px;
@@ -238,6 +247,7 @@ h2 {
   cursor: pointer;
   border: none;
   transition: 0.3s ease;
+  font-family: "Open Sans";
   font-style: normal;
   font-weight: 400;
   font-size: 16px;
@@ -410,7 +420,6 @@ h2 {
 table {
   clear: both;
   width: 100%;
-  border: 1px solid #dcdcff;
   border-radius: 3px;
   border-collapse: collapse;
   color: #444;
@@ -426,31 +435,34 @@ td {
   background-color: white;
 }
 
+.week {
+  height: 22px;
+  background-color: #F3F4F7;
+  padding-top: 22px;
+}
+
 thead td {
   border: none;
-  color: #28283b;
-  text-transform: uppercase;
-  font-size: 1.5em;
+  background-color: #2F5DD3;
+  color: white;
+  font-family: var(--font-family);
+  font-weight: 400;
+  font-size: 16px;
+  height: 48px;
 }
 
 td.not-current {
   color: #c0c0c0;
 }
 
-td.today {
-  background-color: #2F5DD3;
-  color: white;
-}
-
 #btnPrev {
   float: left;
-  margin-bottom: 20px;
+  color: #2F5DD3;
 }
 
 #btnNext {
   float: right;
-  margin-bottom: 20px;
-  color: white;
+  color: #2F5DD3;
 }
 
 #btnPrev,
@@ -459,16 +471,31 @@ td.today {
   border: none;
   outline: none;
   font-size: 1em;
-  color: #c0c0c0;
+  color: #2F5DD3;
   cursor: pointer;
   font-family: sans-serif;
-  text-transform: uppercase;
   transition: all 0.3s ease;
+  font-weight: 100;
 }
 
 #btnPrev:hover,
 #btnNext:hover {
   font-weight: bold;
+}
+
+.selected {
+  background-color: #2F5DD3;
+  color: white;
+}
+
+.selected-date {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+}
+.selected-date .date {
+  background-color: #FF6B00;
+  color: white;
 }
 
 button#burgerMenu {
@@ -495,6 +522,17 @@ button#burgerMenu {
   }
 }
 @media (max-width: 426px) {
+  button#burgerMenu {
+    background: none;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+    display: none;
+    background-color: #2F5DD3;
+    width: 48px;
+    height: 48px;
+    margin-left: 180px;
+  }
   nav.menu ul {
     display: none;
     flex-direction: column;
@@ -528,12 +566,33 @@ button#burgerMenu {
   header {
     padding: 8px 16px;
   }
+  header p {
+    display: none;
+  }
   .images-container .image2 {
     top: -300px;
     z-index: -1;
     width: 984px;
     height: auto;
     left: -100px;
+  }
+  h2 {
+    font-family: var(--font-family);
+    font-style: italic;
+    font-weight: 700;
+    font-size: 24px;
+  }
+  .input-form .rating-container p {
+    font-family: var(--font-family);
+    font-style: italic;
+    font-weight: 700;
+    font-size: 24px;
+    display: flex;
+    align-items: center;
+    color: #FFFFFF;
+  }
+  .table-container .calendar {
+    width: 100%;
   }
   .table-container .vertical-container {
     width: unset;

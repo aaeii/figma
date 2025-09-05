@@ -19,10 +19,9 @@
           <li><a href="#">Пункт 2</a></li>
           <li><a href="#">Пункт 3</a></li>
           <li><a href="#">Пункт 4</a></li>
-          <li><a href="#"> 
-              <p>+7 (800) 999-99-99</p></a></li>
         </ul>
       </nav>
+      <p>+7 (800) 999-99-99</p>
     </header>
     <main>
       <section class="slider">
@@ -72,12 +71,15 @@
         </div>
         <div class="container">
           <div class="vertical"><i class="fa fa-search" aria-hidden="true"></i>
-            <p>Товары, услуги</p>
+            <input type="text" id="search" name="search" required placeholder="Товары, услуги">
           </div>
           <button class="btn-search">Поиск</button>
         </div>
       </section>
-      <h2 style="margin-top: 50px;">Мероприятия на </h2>
+      <div class="selected-date" style="margin-top: 50px;">
+        <h2>Мероприятия на </h2>
+        <h2 class="date" id="selectedDate"> </h2>
+      </div>
       <div class="table-container">
         <div class="calendar">
           <button id="btnPrev" type="button"> <i class="fa fa-angle-left" aria-hidden="true"></i></button>

@@ -12,6 +12,7 @@ html(lang="ru")
 
         link(rel="stylesheet", href="./style/main.css") 
         link(rel="stylesheet", href="./style/slider.css") 
+
         
     body
         header
@@ -28,9 +29,9 @@ html(lang="ru")
                         a(href='#') Пункт 3
                     li
                         a(href='#') Пункт 4
-                    li
-                        a(href='#') 
-                            p +7 (800) 999-99-99
+                    //- li
+                    //-     a(href='#') 
+            p +7 (800) 999-99-99
             
         main
 
@@ -94,18 +95,19 @@ html(lang="ru")
                     .vertical
                         //- img(src="./img/Search.png", alt="blue star") 
                         i.fa.fa-search(aria-hidden='true')
-                        p Товары, услуги
+                        input(type="text", id="search", name="search", required=true placeholder="Товары, услуги")
                     button.btn-search Поиск
                 
-
-            h2(style="margin-top: 50px;") Мероприятия на 
+            div.selected-date(style="margin-top: 50px;")
+                h2 Мероприятия на 
+                h2#selectedDate.date  
             div.table-container
                 .calendar
                     button#btnPrev(type='button') 
                         i.fa.fa-angle-left(aria-hidden='true')
                     button#btnNext(type='button') 
                         i.fa.fa-angle-right(aria-hidden='true')
-                        
+                      
                 
                     #divCal
 

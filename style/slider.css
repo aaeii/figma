@@ -65,6 +65,7 @@
   font-size: 16px;
   line-height: 22px;
   color: #6C6F75;
+  height: 110px;
 }
 .slider .controls {
   position: absolute;
@@ -94,6 +95,15 @@
   color: white;
 }
 
+@media (max-width: 1025px) {
+  .slider .vertical {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 44px;
+    gap: 22px;
+  }
+}
 @media (max-width: 769px) {
   .slider {
     display: flex;
@@ -133,6 +143,13 @@
     font-size: 16px;
     line-height: 22px;
     height: 220px;
+  }
+  .slider .vertical h2 {
+    font-family: var(--font-family);
+    font-style: italic;
+    font-weight: 700;
+    font-size: 24px;
+    color: #242a38;
   }
   .input-form {
     padding: 24px;

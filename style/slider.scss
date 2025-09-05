@@ -72,12 +72,12 @@
 
         p {
             max-width: 608px;
-            // height: 110px;
             font-style: normal;
             font-weight: 400;
             font-size: 16px;
             line-height: 22px;
             color: #6C6F75;
+            height: 110px;
         }
     }
 
@@ -117,9 +117,15 @@
     }
 }
 
-///
-/// 
-
+@media (max-width: 1025px) {
+    .slider .vertical {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 44px;
+        gap: 22px;
+    }
+}
 
 @media (max-width: 769px) {
     .slider {
@@ -172,6 +178,14 @@
                 font-size: 16px;
                 line-height: 22px;
                 height: 220px;
+            }
+
+            h2 {
+                font-family: var(--font-family);
+                font-style: italic;
+                font-weight: 700;
+                font-size: 24px;
+                color: #242a38;
             }
         }
     }

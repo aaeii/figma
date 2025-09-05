@@ -119,6 +119,14 @@ h2 {
             align-items: center;
             gap: 16px;
             color: #6C6F75;
+            font-family: var(--font-family);
+            font-weight: 400;
+            font-size: 16px;
+            color: #6c6f75;
+
+            input {
+                border: none;
+            }
         }
 
         .btn-search {
@@ -177,9 +185,8 @@ h2 {
     width: 100%;
     z-index: 999;
     position: relative;
+    margin-top: 25px;
 
-
-    // .calendar,
     .vertical-container {
         display: flex;
         flex-direction: column;
@@ -256,7 +263,7 @@ h2 {
                 order: 0;
                 flex-grow: 0;
 
-                // font-family: 'Open Sans';
+                font-family: 'Open Sans';
                 font-style: normal;
                 font-weight: 400;
                 font-size: 16px;
@@ -280,7 +287,7 @@ h2 {
                 cursor: pointer;
                 border: none;
                 transition: 0.3s ease;
-                // font-family: 'Open Sans';
+                font-family: 'Open Sans';
                 font-style: normal;
                 font-weight: 400;
                 font-size: 16px;
@@ -410,8 +417,6 @@ h2 {
         left: 4px;
     }
 
-    // }
-
     button {
         padding: 10px 15px;
         background-color: #2F5DD3;
@@ -491,12 +496,12 @@ h2 {
     width: 480px;
     height: 434px;
     background: #fff;
+
 }
 
 table {
     clear: both;
     width: 100%;
-    border: 1px solid #dcdcff;
     border-radius: 3px;
     border-collapse: collapse;
     color: #444;
@@ -512,11 +517,20 @@ td {
     background-color: white;
 }
 
+.week {
+    height: 22px;
+    background-color: #F3F4F7;
+    padding-top: 22px;
+}
+
 thead td {
     border: none;
-    color: #28283b;
-    text-transform: uppercase;
-    font-size: 1.5em;
+    background-color: #2F5DD3;
+    color: white;
+    font-family: var(--font-family);
+    font-weight: 400;
+    font-size: 16px;
+    height: 48px;
 }
 
 td.not-current {
@@ -524,23 +538,16 @@ td.not-current {
 }
 
 
-
-td.today {
-    background-color: #2F5DD3;
-    color: white;
-}
-
-
 #btnPrev {
     float: left;
-    margin-bottom: 20px;
-    // color: white;
+    color: #2F5DD3;
+    ;
 }
 
 #btnNext {
     float: right;
-    margin-bottom: 20px;
-    color: white;
+    color: #2F5DD3;
+    ;
 }
 
 #btnPrev,
@@ -549,16 +556,33 @@ td.today {
     border: none;
     outline: none;
     font-size: 1em;
-    color: #c0c0c0;
+    color: #2F5DD3;
+    ;
     cursor: pointer;
     font-family: sans-serif;
-    text-transform: uppercase;
     transition: all 0.3s ease;
+    font-weight: 100;
 }
 
 #btnPrev:hover,
 #btnNext:hover {
     font-weight: bold;
+}
+
+.selected {
+    background-color: #2F5DD3;
+    color: white;
+}
+
+.selected-date {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+
+    .date {
+        background-color: #FF6B00;
+        color: white;
+    }
 }
 
 ///mobile
@@ -592,6 +616,19 @@ button#burgerMenu {
 }
 
 @media (max-width: 426px) {
+
+    button#burgerMenu {
+        background: none;
+        border: none;
+        font-size: 24px;
+        cursor: pointer;
+        display: none;
+        background-color: #2F5DD3;
+        width: 48px;
+        height: 48px;
+        margin-left: 180px;
+    }
+
     nav.menu ul {
         display: none;
         flex-direction: column;
@@ -603,6 +640,7 @@ button#burgerMenu {
         z-index: 100;
         padding: 10px 0;
     }
+
 
 
     nav.menu.active ul {
@@ -634,6 +672,10 @@ button#burgerMenu {
 
     header {
         padding: 8px 16px;
+
+        p {
+            display: none;
+        }
     }
 
 
@@ -647,7 +689,33 @@ button#burgerMenu {
         }
     }
 
+    h2 {
+        font-family: var(--font-family);
+        font-style: italic;
+        font-weight: 700;
+        font-size: 24px;
+    }
+
+    .input-form {
+        .rating-container {
+            p {
+                font-family: var(--font-family);
+                font-style: italic;
+                font-weight: 700;
+                font-size: 24px;
+                display: flex;
+                align-items: center;
+                color: #FFFFFF;
+            }
+        }
+    }
+
     .table-container {
+
+        .calendar {
+            width: 100%;
+        }
+
         .vertical-container {
             width: unset;
 
