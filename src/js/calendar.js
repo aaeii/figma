@@ -15,8 +15,6 @@ var Cal = function(divId) {
   this.currMonth = d.getMonth();
   this.currYear = d.getFullYear();
   this.currDay = d.getDate();
-
-  
 };
 
 Cal.prototype.nextMonth = function() {

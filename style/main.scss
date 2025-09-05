@@ -25,12 +25,6 @@ header {
     background-color: white;
     height: 96px;
 
-    // padding: 8px 128px;
-    // margin: 0 auto;
-    // width: 100%;
-
-
-
     p {
         font-weight: 700;
         font-size: 24px;
@@ -500,13 +494,11 @@ h2 {
 
 
 
-// /////
+
 
 .calendar {
     width: 480px;
     height: 434px;
-    background: #fff;
-
 }
 
 table {
@@ -609,12 +601,6 @@ button#burgerMenu {
 }
 
 
-
-// @media (max-width: 1440px) {
-//     main {
-//         overflow: hidden;
-//     }
-// }
 @media (max-width: 769px) {
     main {
 
@@ -643,7 +629,6 @@ button#burgerMenu {
         background-color: #2F5DD3;
         width: 48px;
         height: 48px;
-        margin-left: 180px;
     }
 
     nav.menu ul {
