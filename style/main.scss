@@ -498,15 +498,15 @@ h2 {
 
 .calendar {
     width: 480px;
-    height: 434px;
 }
 
 table {
     clear: both;
     width: 100%;
-    border-radius: 3px;
     border-collapse: collapse;
     color: #444;
+    position: relative;
+    top: -20px;
 }
 
 td {
@@ -549,7 +549,6 @@ td.not-current {
 #btnNext {
     float: right;
     color: #2F5DD3;
-    ;
 }
 
 #btnPrev,
@@ -558,12 +557,15 @@ td.not-current {
     border: none;
     outline: none;
     font-size: 1em;
-    color: #2F5DD3;
-    ;
+    color: white;
     cursor: pointer;
     font-family: sans-serif;
     transition: all 0.3s ease;
     font-weight: 100;
+    position: relative;
+    top: 15px;
+    padding: 0px 30px;
+    z-index: 1;
 }
 
 #btnPrev:hover,
@@ -584,7 +586,7 @@ td.not-current {
     .date {
         background-color: #FF6B00;
         color: white;
-        padding: 0px 5px
+        // padding: 0px 5px
     }
 }
 
@@ -698,8 +700,17 @@ button#burgerMenu {
         font-size: 24px;
     }
 
-    .input-form {
+
+.input-form {
+        padding: 24px;
+        gap: 16px;
+        flex-direction: column;
+
         .rating-container {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            gap: 24px;
             p {
                 font-family: var(--font-family);
                 font-style: italic;
@@ -711,21 +722,34 @@ button#burgerMenu {
             }
         }
     }
-
+    
     .table-container {
-
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 16px;
         .calendar {
             width: 100%;
         }
 
         .vertical-container {
             width: unset;
-
             .container-element {
+
+                .btn-write,
                 .btn-more {
                     width: 100%;
                 }
             }
         }
+    }
+
+     .container {
+        margin-top: 50px;
+
+    }
+
+    .application form {
+        width: 100%;
+        padding: 24px;
     }
 }

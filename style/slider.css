@@ -154,38 +154,6 @@
     font-size: 24px;
     color: #242a38;
   }
-  .input-form {
-    padding: 24px;
-    gap: 16px;
-    flex-direction: column;
-  }
-  .input-form .rating-container {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    gap: 24px;
-  }
-  .table-container {
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 16px;
-  }
-  .table-container .calendar {
-    width: unset;
-    height: unset;
-    background: #fff;
-  }
-  .table-container .vertical-container .container-element .btn-write,
-  .table-container .vertical-container .container-element .btn-write {
-    width: 100%;
-  }
-  .container {
-    margin-top: 50px;
-  }
-  .application form {
-    width: 100%;
-    padding: 24px;
-  }
 }
 
 /*# sourceMappingURL=slider.css.map */
