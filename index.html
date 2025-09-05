@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="../style/main.css">
+    <link rel="stylesheet" href="../style/slider.css">
+  </head>
+  <body>
+    <header><img class="logo" src="../img/Logo.png" alt="logo">
+      <button id="burgerMenu" type="button"> <i class="fa fa-bars" aria-hidden="true"></i></button>
+      <nav class="menu"> 
+        <ul>
+          <li><a href="#">Пункт 1</a></li>
+          <li><a href="#">Пункт 2</a></li>
+          <li><a href="#">Пункт 3</a></li>
+          <li><a href="#">Пункт 4</a></li>
+          <li><a href="#"> 
+              <p>+7 (800) 999-99-99</p></a></li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+      <section class="slider">
+        <div class="slides">
+          <div class="slide active">
+            <div class="img-container"><img class="img" src="../img/Image1.png" alt="Горы"></div>
+            <div class="vertical">
+              <h2>Слайд 1</h2>
+              <p>Сайт рыбатекст поможет дизайнеру, верстальщику, вебмастеру сгенерировать несколько абзацев более менее осмысленного текста рыбы на русском языке, а начинающему оратору отточить навык публичных выступлений в домашних условиях. При создании генератора мы использовали небезизвестный универсальный код речей.</p>
+              <button class="btn">Кнопка</button>
+            </div>
+            <div class="controls">
+              <button class="btn prev-btn"> <i class="fa fa-angle-left" aria-hidden="true"></i></button>
+              <button class="btn next-btn"> <i class="fa fa-angle-right" aria-hidden="true"></i></button>
+            </div>
+          </div>
+          <div class="slide">
+            <div class="img-container"><img class="img" src="../img/Image2.jpg" alt="Горы"></div>
+            <div class="vertical">
+              <h2>Слайд 2</h2>
+              <p>Данный сайт рыбатекст поможет сгенерировать несколько абзацев более менее осмысленного текста.</p>
+              <button class="btn">Кнопка</button>
+            </div>
+            <div class="controls">
+              <button class="btn prev-btn"> <i class="fa fa-angle-left" aria-hidden="true"></i></button>
+              <button class="btn next-btn"> <i class="fa fa-angle-right" aria-hidden="true"></i></button>
+            </div>
+          </div>
+          <div class="slide">
+            <div class="img-container"><img class="img" src="../img/Image3.jpg" alt="Горы"></div>
+            <div class="vertical">
+              <h2>Слайд 3</h2>
+              <p>Сайт рыбатекст поможет дизайнеру, верстальщику, вебмастеру сгенерировать несколько абзацев более менее осмысленного текста.</p>
+              <button class="btn">Кнопка</button>
+            </div>
+            <div class="controls">
+              <button class="btn prev-btn"> <i class="fa fa-angle-left" aria-hidden="true"></i></button>
+              <button class="btn next-btn"> <i class="fa fa-angle-right" aria-hidden="true"></i></button>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="input-form">
+        <div class="rating-container"> 
+          <p class="p">Блок с поиском</p>
+          <div class="stars"><img src="../img/Star 17.png" alt="blue star"><img src="../img/Star 17.png" alt="blue star"><img src="../img/Star 17.png" alt="blue star"></div>
+        </div>
+        <div class="container">
+          <div class="vertical"><i class="fa fa-search" aria-hidden="true"></i>
+            <p>Товары, услуги</p>
+          </div>
+          <button class="btn-search">Поиск</button>
+        </div>
+      </section>
+      <h2 style="margin-top: 50px;">Мероприятия на </h2>
+      <div class="table-container">
+        <div class="calendar">
+          <button id="btnPrev" type="button"> <i class="fa fa-angle-left" aria-hidden="true"></i></button>
+          <button id="btnNext" type="button"> <i class="fa fa-angle-right" aria-hidden="true"></i></button>
+          <div id="divCal"></div>
+        </div>
+        <div class="vertical-container">
+          <div class="container-element"> 
+            <div class="tags">
+              <div class="btn-tag">Очень длинный тэг</div>
+              <div class="btn-tag">Тэг</div>
+              <div class="btn-tag">Очень длинный тэг  </div>
+              <div class="btn-tag">Тэг</div>
+              <div class="btn-tag">Очень длинный тэг  </div>
+              <div class="btn-tag">Тэг</div>
+              <div class="btn-tag">Тэг</div>
+              <div class="btn-tag">Тэг </div>
+              <div class="btn-tag">Очень длинный тэг  </div>
+              <div class="btn-tag">Тэг</div>
+              <div class="btn-tag">Тэг</div>
+            </div>
+            <p>Международная научно-практическая конференция: “Переход от образовательной среды к образовательной экосистеме в интересах устойчивого развития””</p>
+            <div class="tags">
+              <button class="btn-write">Написать</button>
+              <button class="btn-more">
+                 Подробнее<i class="fa fa-arrow-right" aria-hidden="true"></i>
+                <div class="triangle"></div>
+              </button>
+            </div>
+          </div>
+          <div class="container-element"> 
+            <div class="tags">
+              <div class="btn-tag">Образование</div>
+              <div class="btn-tag">Очное</div>
+              <div class="btn-tag">Студенты</div>
+            </div>
+            <p>Международная научно-практическая конференция: “Переход от образовательной среды к образовательной экосистеме в интересах устойчивого развития””</p>
+            <div class="tags">
+              <button class="btn-write">Написать</button>
+              <button class="btn-more">
+                 Подробнее<i class="fa fa-arrow-right" aria-hidden="true"></i>
+                <div class="triangle"></div>
+              </button>
+            </div>
+          </div>
+          <div class="container-element"> 
+            <div class="tags">
+              <div class="btn-tag">Образование</div>
+              <div class="btn-tag">Очное</div>
+              <div class="btn-tag">Студенты</div>
+            </div>
+            <p>Международная научно-практическая конференция: “Переход от образовательной среды к образовательной экосистеме в интересах устойчивого развития””</p>
+            <div class="tags">
+              <button class="btn-write">Написать</button>
+              <button class="btn-more">
+                 Подробнее<i class="fa fa-arrow-right" aria-hidden="true"></i>
+                <div class="triangle"></div>
+              </button>
+            </div>
+          </div>
+          <div class="container-element"> 
+            <div class="tags">
+              <div class="btn-tag">Образование</div>
+              <div class="btn-tag">Очное</div>
+              <div class="btn-tag">Студенты</div>
+            </div>
+            <p>Международная научно-практическая конференция: “Переход от образовательной среды к образовательной экосистеме в интересах устойчивого развития””</p>
+            <div class="tags">
+              <button class="btn-write">Написать</button>
+              <button class="btn-more">
+                 Подробнее<i class="fa fa-arrow-right" aria-hidden="true"></i>
+                <div class="triangle"></div>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="container">
+        <h2>Подача заявки</h2>
+        <div class="images-container"><img class="image1" id="img-figures" src="../img/Other 01.png" alt="figures"><img class="image2" src="../img/Vector.png" alt="science"></div>
+        <div class="application">
+          <form action="/submit" method="post">
+            <div class="form-group">
+              <input type="text" id="name" name="name" required placeholder="Имя">
+            </div>
+            <div class="form-group">
+              <input type="email" id="email" name="email" required placeholder="Почта">
+            </div>
+            <div class="form-gender">
+              <P>Пол:</P>
+              <label>
+                <input type="radio" name="gender" value="male" required><span class="custom-radio"></span>Мужской
+              </label>
+              <label>
+                <input type="radio" name="gender" value="female" required><span class="custom-radio"></span>Женский    
+              </label>
+            </div>
+            <div class="form-select">
+              <label for="dropdown">Выберите</label>
+              <select id="dropdown" name="options" required>
+                <option value="" disabled selected>Выбор</option>
+                <option value="option1">Опция 1</option>
+                <option value="option2">Опция 2</option>
+                <option value="option3">Опция 3</option>
+              </select>
+            </div>
+            <button type="submit">Подать заявку</button>
+            <div class="text-input-container">
+               Другой способ</div>
+            <div class="segmented-picker">
+              <button type="button" style="background-color:#FC3F1D"> <img src="../img/yandex.png" alt="ya"></button>
+              <button type="button"> <img src="../img/vk.png" alt="vk"></button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </main>
+  </body>
+  <script src="./js/slider.js"></script>
+  <script src="./js/calendar.js"></script>
+  <script src="./js/menu.js"></script>
+</html>
