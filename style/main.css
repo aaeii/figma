@@ -27,6 +27,8 @@ header {
   justify-content: space-between;
   align-items: center;
   padding: 8px 128px;
+  max-width: 1440px;
+  margin: 0 auto;
 }
 header p {
   font-weight: 700;
