@@ -10,6 +10,17 @@ body {
     background-color: #F3F4F7;
 }
 
+main {
+    padding: 50px 128px;
+    margin: 0 auto;
+    max-width: 1440px;
+    overflow: hidden;
+}
+
+button {
+    cursor: pointer;
+}
+
 header {
     background-color: white;
     height: 96px;
@@ -64,11 +75,7 @@ header {
 }
 
 
-main {
-    padding: 50px 128px;
-    margin: 0 auto;
-    max-width: 1440px;
-}
+
 
 section {
     // margin-bottom: 20px; 
@@ -246,6 +253,7 @@ h2 {
                 width: 151px;
                 height: 48px;
                 border: 1px solid #2F5DD3;
+                background-color: white;
                 flex: none;
                 order: 0;
                 flex-grow: 0;
@@ -280,23 +288,19 @@ h2 {
                 font-size: 16px;
                 line-height: 22px;
 
-
-
                 .triangle {
                     position: absolute;
-                    right: -32px;
+                    right: -1px;
                     width: 0;
                     height: 0;
-                    border-left: 0px solid transparent;
-                    border-right: 32px solid transparent;
-                    border-bottom: 48px solid #2F5DD3;
+                    border-left: 32px solid transparent;
+                    border-top: 48px solid #ffffff;
                 }
             }
 
         }
     }
 }
-
 
 .container {
     position: relative;
@@ -305,37 +309,32 @@ h2 {
 
 .images-container {
     position: relative;
-    /* top: 0; */
-    /* left: 0; */
     width: 100%;
     height: auto;
-    z-index: 0;
+    z-index: 1;
 
     img {
-        left: -128px;
-
+        position: absolute;
+        height: auto;
     }
 
-    .image1 {
-        position: absolute;
+    .image1 {//////
         width: 878px;
-        height: 878px;
         top: -150px;
-        left: 390px;
+        left: 50%;
+        transform: translateX(-50%);
     }
 
     .image2 {
         top: -300px;
         z-index: -1;
-        height: 926px;
-        position: absolute;
         width: 100vw;
         height: auto;
     }
 }
 
 .application form {
-    position: absolute;
+    position: relative;
     z-index: 2;
     background-color: white;
     padding: 48px;
@@ -343,13 +342,11 @@ h2 {
     display: flex;
     flex-direction: column;
     width: 580px;
-    // height: 557px;
     margin-top: 35px;
     color: #6C6F75;
 
     .form-gender {
         width: 100%;
-
         display: flex;
         flex-direction: row;
         align-items: center;
@@ -357,7 +354,6 @@ h2 {
 
         label {
             display: flex;
-
             align-items: center;
         }
     }
@@ -366,6 +362,10 @@ h2 {
         display: flex;
         gap: 9px;
         flex-direction: column;
+
+        select {
+            cursor: pointer;
+        }
     }
 
     input[type="text"],
@@ -417,7 +417,6 @@ h2 {
         background-color: #2F5DD3;
         color: white;
         border: none;
-        cursor: pointer;
         width: 100%;
         height: 48px;
     }
@@ -586,6 +585,10 @@ button#burgerMenu {
     header {
         padding: 8px 20px;
     }
+
+    #img-figures {
+        display: none;
+    }
 }
 
 @media (max-width: 426px) {
@@ -601,8 +604,14 @@ button#burgerMenu {
         padding: 10px 0;
     }
 
+    
     nav.menu.active ul {
         display: flex;
+        align-items: flex-end;
+        padding: 24px;
+                margin-top: 37px;
+        border: 2px solid rgb(108, 111, 117, 0.3);
+                gap: 16px;
     }
 
     button#burgerMenu {
@@ -612,12 +621,33 @@ button#burgerMenu {
 
     main {
 
-        padding: 16px 16px;
+        padding: 16px 16px 50px 16px;
         max-width: 425px;
 
     }
 
     header {
         padding: 8px 16px;
+    }
+
+
+    .images-container {
+        .image2 {
+            top: -300px;
+            z-index: -1;
+            width: 984px;
+            height: auto;
+            left: -100px;
+        }
+    }
+
+    .table-container {
+        .vertical-container {
+            .container-element {
+                .btn-more {
+                    width: 100%;
+                }
+            }
+        }
     }
 }
