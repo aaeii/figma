@@ -71,6 +71,7 @@ header p {
 }
 
 h2 {
+  font-family: var(--font-family);
   font-style: italic;
   font-weight: 700;
   font-size: 32px;
@@ -135,6 +136,7 @@ h2 {
   height: auto;
 }
 .input-form .rating-container p {
+  font-family: var(--font-family);
   font-style: italic;
   font-weight: 700;
   font-size: 32px;
@@ -180,10 +182,9 @@ h2 {
   margin: 0;
   flex-direction: column;
 }
-.table-container .vertical-container .container-element .p {
+.table-container .vertical-container .container-element p {
   color: black;
   font-style: normal;
-  font-weight: 600;
   font-size: 18px;
   line-height: 25px;
 }
@@ -230,7 +231,7 @@ h2 {
   flex: none;
   order: 0;
   flex-grow: 0;
-  font-family: "Open Sans";
+  font-family: var(--font-family);
   font-style: normal;
   font-weight: 400;
   font-size: 16px;
@@ -253,7 +254,7 @@ h2 {
   cursor: pointer;
   border: none;
   transition: 0.3s ease;
-  font-family: "Open Sans";
+  font-family: var(--font-family);
   font-style: normal;
   font-weight: 400;
   font-size: 16px;
@@ -343,6 +344,15 @@ h2 {
   gap: 8px;
   height: 48px;
   border: 2px solid rgba(108, 111, 117, 0.3);
+  font-family: var(--font-family);
+  font-weight: 400;
+  font-size: 16px;
+}
+.application form input[type=text],
+.application form input[type=email] {
+  color: #6c6f75;
+}
+.application form select {
   color: #242A38;
 }
 .application form input[type=radio] {
@@ -383,7 +393,7 @@ h2 {
   align-items: center;
   font-size: 25px;
   text-align: center;
-  font-family: "Open Sans";
+  font-family: var(--font-family);
   font-style: normal;
   font-weight: 400;
   font-size: 16px;
@@ -521,6 +531,14 @@ button#burgerMenu {
   height: 48px;
 }
 
+nav.menu .burger-menu {
+  display: none;
+}
+nav.menu .burger-menu a {
+  font-size: 24px;
+  color: #2F5DD3;
+}
+
 @media (max-width: 769px) {
   main {
     padding: 16px 20px;
@@ -544,6 +562,9 @@ button#burgerMenu {
     width: 48px;
     height: 48px;
   }
+  nav.menu.active .burger-menu {
+    display: block;
+  }
   nav.menu ul {
     display: none;
     flex-direction: column;
@@ -559,20 +580,21 @@ button#burgerMenu {
     display: flex;
     align-items: flex-end;
     padding: 24px;
-    margin-top: 37px;
-    border: 2px solid rgba(108, 111, 117, 0.3);
+    margin-top: 33px;
+    border-top: 2px solid rgba(108, 111, 117, 0.3);
     gap: 16px;
   }
   button#burgerMenu {
     display: block;
   }
-  .active-background {
-    backdrop-filter: blur(5px);
-    transition: backdrop-filter 0.3s ease;
-  }
   main {
     padding: 16px 16px 50px 16px;
     max-width: 425px;
+  }
+  .blur {
+    filter: blur(5px) brightness(0.9);
+    background-color: #F3F4F7;
+    transition: filter 0.3s ease;
   }
   .container-header {
     padding: 8px 16px;

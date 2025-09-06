@@ -17,6 +17,8 @@ main {
     overflow: hidden;
 }
 
+
+
 button {
     cursor: pointer;
 }
@@ -30,7 +32,6 @@ header {
         font-size: 24px;
         line-height: 33px;
         color: #2F5DD3;
-
     }
 }
 
@@ -68,6 +69,8 @@ header {
         line-height: 25px;
         text-decoration: none;
         color: #6C6F75;
+
+
     }
 
 }
@@ -86,6 +89,8 @@ section {
 
 
 h2 {
+    font-family: var(--font-family);
+    ;
     font-style: italic;
     font-weight: 700;
     font-size: 32px;
@@ -157,6 +162,7 @@ h2 {
         height: auto;
 
         p {
+            font-family: var(--font-family);
             font-style: italic;
             font-weight: 700;
             font-size: 32px;
@@ -208,10 +214,10 @@ h2 {
             margin: 0;
             flex-direction: column;
 
-            .p {
+            p {
                 color: black;
                 font-style: normal;
-                font-weight: 600;
+                // font-weight: 600;
                 font-size: 18px;
                 line-height: 25px;
 
@@ -266,7 +272,7 @@ h2 {
                 order: 0;
                 flex-grow: 0;
 
-                font-family: 'Open Sans';
+                font-family: var(--font-family);
                 font-style: normal;
                 font-weight: 400;
                 font-size: 16px;
@@ -290,7 +296,7 @@ h2 {
                 cursor: pointer;
                 border: none;
                 transition: 0.3s ease;
-                font-family: 'Open Sans';
+                font-family: var(--font-family);
                 font-style: normal;
                 font-weight: 400;
                 font-size: 16px;
@@ -391,6 +397,19 @@ h2 {
         gap: 8px;
         height: 48px;
         border: 2px solid rgba(108, 111, 117, 0.3);
+
+        font-family: var(--font-family);
+        font-weight: 400;
+        font-size: 16px;
+
+    }
+
+    input[type="text"],
+    input[type="email"] {
+        color: #6c6f75;
+    }
+
+    select {
         color: #242A38;
     }
 
@@ -442,15 +461,12 @@ h2 {
         font-size: 25px;
         text-align: center;
 
-        font-family: 'Open Sans';
+        font-family: var(--font-family);
         font-style: normal;
         font-weight: 400;
         font-size: 16px;
         line-height: 22px;
-
         color: #3E4958;
-
-
     }
 
     .text-input-container::before,
@@ -603,13 +619,22 @@ button#burgerMenu {
 
 }
 
+nav.menu .burger-menu {
+    display: none;
+
+    a {
+        font-size: 24px;
+        color: #2F5DD3;
+    }
+}
+
+
+
 
 @media (max-width: 769px) {
     main {
-
         padding: 16px 20px;
         max-width: 769px;
-
     }
 
     .container-header {
@@ -634,6 +659,10 @@ button#burgerMenu {
         height: 48px;
     }
 
+    nav.menu.active .burger-menu {
+        display: block;
+    }
+
     nav.menu ul {
         display: none;
         flex-direction: column;
@@ -652,8 +681,8 @@ button#burgerMenu {
         display: flex;
         align-items: flex-end;
         padding: 24px;
-        margin-top: 37px;
-        border: 2px solid rgb(108, 111, 117, 0.3);
+        margin-top: 33px;
+        border-top: 2px solid rgba(108, 111, 117, 0.3);
         gap: 16px;
     }
 
@@ -662,17 +691,16 @@ button#burgerMenu {
 
     }
 
-    .active-background {
-        backdrop-filter: blur(5px);
-        transition: backdrop-filter 0.3s ease;
-    }
-
-
     main {
 
         padding: 16px 16px 50px 16px;
         max-width: 425px;
+    }
 
+    .blur {
+        filter: blur(5px) brightness(0.9);
+        background-color: #F3F4F7;;
+        transition: filter 0.3s ease;
     }
 
     .container-header {
@@ -701,7 +729,7 @@ button#burgerMenu {
     }
 
 
-.input-form {
+    .input-form {
         padding: 24px;
         gap: 16px;
         flex-direction: column;
@@ -711,6 +739,7 @@ button#burgerMenu {
             flex-direction: column;
             justify-content: space-between;
             gap: 24px;
+
             p {
                 font-family: var(--font-family);
                 font-style: italic;
@@ -722,17 +751,19 @@ button#burgerMenu {
             }
         }
     }
-    
+
     .table-container {
         flex-direction: column;
         align-items: flex-start;
         gap: 16px;
+
         .calendar {
             width: 100%;
         }
 
         .vertical-container {
             width: unset;
+
             .container-element {
 
                 .btn-write,
@@ -743,7 +774,7 @@ button#burgerMenu {
         }
     }
 
-     .container {
+    .container {
         margin-top: 50px;
 
     }
